@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import './App.css';
+import Header_NameThree from './components/Header';
+
+// 任何component首字母强制大写
+const App111 = () => {
+  return( //return()可不写
+    <div className = 'container'>
+      <Header_NameThree /> 
     </div>
-  );
+  )
 }
 
-export default App;
+export default App111;
