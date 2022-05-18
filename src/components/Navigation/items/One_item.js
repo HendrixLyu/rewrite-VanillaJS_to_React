@@ -1,5 +1,4 @@
-import './items.css'
-
+import './All_items.css'
 import styled from 'styled-components' //在js内写`CSS`
 //共ABCD四种写法
 // A->直接通过props.传参
@@ -23,7 +22,8 @@ const Item_B = (props) => {
     );
 };
 
-const Wrapper = styled.a`
+/* 标签是div,就是styled.div`....`, 标签是a,就是styled.a`....` */
+const Wrapper = styled.a` 
     padding: 16px;
     text-decoration: none;
     color: #49515d;
@@ -51,7 +51,6 @@ const Wrapper = styled.a`
         padding-right: 0;
     }
 `
-
 // C-> 再传入is_Active变量,并设置默认值
 const Item_C = (props) => {
     const {href_xyz, text_aaa: pageName, is_Active=false} = props //解构赋值
@@ -60,11 +59,11 @@ const Item_C = (props) => {
     if (is_Active) {
         className += " navbar__item--active" }//前面必须加空格
 
-    return ( 
+    return ( //用styled-components替代CSS//
         // <a className={className} href_666={href_xyz}>
         //     {pageName}
         // </a> 
-        <Wrapper href_666={href_xyz}>
+        <Wrapper href_666={href_xyz}> 
             {pageName}
         </Wrapper>
     );
@@ -95,4 +94,4 @@ const Item_D = (props) => {
 };
 
 //导出组件
-export default Item_C
+export default Item_C;
