@@ -1,4 +1,4 @@
-import  Item_Cccc  from './Items'
+import  Item_Cccc  from './Items' //Item为可复用组件
 
 // import './navigation.css' //被styled-components完全替代
 import styled from 'styled-components'; //使用styled-components可完全替代CSS
@@ -7,8 +7,7 @@ const Wrapper123 = styled.div`
     display: flex;
 `
 
-const Other_ITEMS = [
-    {
+const Other_ITEMS = [{
         Href_New:"AA--AA",
         Text_New:"aa+aa"
     },{
@@ -18,8 +17,7 @@ const Other_ITEMS = [
     },{
         Href_New:"CC^CC",
         Text_New:"cc^cc"
-    },
-]
+    }]
 
 const navigation_1 = () => {
     return ( 

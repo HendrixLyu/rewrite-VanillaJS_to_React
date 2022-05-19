@@ -1,8 +1,7 @@
-import Logo_333 from '../Logo'
-import Navigation_222 from '../Navigation'
-// import './Header.css' //用styled-components替代CSS
-
-import styled from 'styled-components'
+import Logo_333 from './Logo'
+import Navigation_222 from './Navigation'
+// import './Header.css' //用styled-components替代CSS文件
+import styled from 'styled-components' //快捷键imsc
 
 const Wapper456 = styled.header`
     padding: 15px 0;
