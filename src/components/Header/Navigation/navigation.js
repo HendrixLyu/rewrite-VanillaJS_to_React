@@ -17,7 +17,7 @@ const Other_ITEMS = [{
     },{
         Href_New:"CC^CC",
         Text_New:"cc^cc"
-    }]
+    },]
 
 const navigation_1 = () => {
     return ( 
