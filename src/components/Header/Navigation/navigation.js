@@ -1,4 +1,4 @@
-import  Item_Cccc  from './Items' //Item为可复用组件
+import  Item_Ddd  from './Items' //Item为可复用组件
 
 // import './navigation.css' //被styled-components完全替代
 import styled from 'styled-components'; //使用styled-components可完全替代CSS
@@ -9,14 +9,14 @@ const Wrapper123 = styled.div`
 
 const Other_ITEMS = [{
         Href_New:"AA--AA",
-        Text_New:"aa+aa"
+        Text_New:"aa+aa",
     },{
         Href_New:"BB|BB",
         Text_New:"bb&bb",
         is_Active:true,
     },{
         Href_New:"CC^CC",
-        Text_New:"cc^cc"
+        Text_New:"cc^cc",
     },]
 
 const navigation_1 = () => {
@@ -30,13 +30,13 @@ const navigation_1 = () => {
             <a className="navbar__item" href="SERVICES">Services</a>
             {/* <Item_B href="SERVICES" pageText="Services" /> */} {/* Item_B后的参数均为props接收到的参数 */}
             <a className="navbar__item" href="BLOG">Blog</a>
-            {/* <Item_Cccc href_xyz="BLOG"  text_aaa="Blog"  is_Active/> */}
+            {/* <Item_C href_xyz="BLOG"  text_aaa="Blog"  is_Active/> */}
             <a className="navbar__item" href="CONTACT">Contact</a>
-            {/* <Item_D href_1="CONTACT" is_Active>Contact</Item_D> */}
-            {/* D为最最接近HTML的写法，需使用默认参数:children */}
-            {/* 传入更多参数 map方法: */}
+            <Item_Ddd href_1="CONTACT" is_Active> Contact </Item_Ddd>
+            {/* D为最最接近HTML的写法，需使用默认props参数:children */}
+            {/* 传入更多参数,使用map方法操作Array: */}
             {Other_ITEMS.map(({Href_New, Text_New, is_Active}) => (
-                <Item_Cccc href_xyz={Href_New} text_aaa={Text_New} is_Active={is_Active} />
+                <Item_Ddd href_xyz={Href_New} is_Active={is_Active}> {Text_New} </Item_Ddd>
             ) )}
             
         </Wrapper123>
