@@ -1,5 +1,5 @@
 import './All_items.css'
-import styled from 'styled-components' //在js内写`CSS`
+import styled, {css} from 'styled-components' //在js内写`CSS`
 //共ABCD四种写法
 // A->直接通过props.传参
 const Item_A = (props) => {
@@ -27,12 +27,12 @@ const Item_B = (props) => {
 const Item_C = (props) => {
     const {href_xyz, text_aaa: pageName, is_Active=false} = props //解构赋值 //默认将is_Active设为false,不传值即默认false
     // console.log(href_1, is_Active)
-    let className = "navbar__item"
+    let className1 = "navbar__item"
     if (is_Active) {
-        className += " navbar__item--active" }//前面必须加空格
+        className1 += " navbar__item--active" }//前面必须加空格
 
     return ( 
-        <a className={className} href_666={href_xyz}>
+        <a className={className1} href_666={href_xyz}>
             {pageName}
         </a> 
     );
@@ -42,58 +42,57 @@ const Item_C = (props) => {
     //     is_Active: false,
     // };
 
-    /* Html标签是div,就是styled.div`....`, 标签是a,就是styled.a`....` */
-const Wrapper = styled.a` 
-padding: 16px;
-text-decoration: none;
-color: #49515d;
-font-size: 15px;
-opacity: 0.6;
-display: block;
-transition: opacity 0.3s ease-in-out;
-/* 用scss写法 */
-::after {
-    content: "";  
-    width: 0;
-    border-bottom: 3px solid #377e9a;
-    margin: auto;
-    margin-top: 4px;
+    /* Html的标签是div,就是styled.div`....`, 标签是a,就是styled.a`....` */
+const activeStyle = css`
+    color: red;
+        opacity:1;
+        ::after {
+            width:30px;
+        }   
+`
+const Wrapper666 = styled.a` 
+    padding: 16px;
+    text-decoration: none;
+    color: #49515d;
+    font-size: 15px;
+    opacity: 0.6;
     display: block;
-    transition: width 0.3s ease-in-out;
-}
-:hover {
-    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    /* 用scss写法 */
     ::after {
-        width: 24px;
+        content: "";  
+        width: 0;
+        border-bottom: 3px solid #377e9a;
+        margin: auto;
+        margin-top: 4px;
+        display: block;
+        transition: width 0.3s ease-in-out;
     }
-}
-:last-of-type {
-    padding-right: 0;
-
-${({is_Active}) => is_Active &&`
-    opacity:1;
-    ::after {
-        width:24px;
+    :hover {
+        ${activeStyle}
     }
-`}
-}
+    :last-of-type {
+        padding-right: 0;
+    }
+    ${({active}) => active && activeStyle}
+    
 `
 //D-> 使用children将innerHTML传进来的内容替代test_aaa.
     //默认将is_Active设为false,不传值即为默认值false
 const Item_D = (props) => {
-    const {href_1, is_Active=false, children} = props //解构赋值
+    const {href_1, active, children} = props //解构赋值
     // let className = "navbar__item"
     // if (is_Active) {
     //     className += " navbar__item--active" } //前面必须加空格
-    //将if改写成三元表达式:↓↓
-    const className = is_Active ? 
+    //将↑↑if改写成三元表达式:↓↓
+    const className111 = active ? 
                     'navbar__item navbar__item--active' :
                     'navbar__item';
     return ( //↓用styled-components替代CSS↓//
-        // <a className={className} href_666={href_1}> {children} </a> 
-        <Wrapper href_666={href_1} is_Active={is_Active}> 
+        // <a className={className111} href_666={href_1}> {children} </a> //引用外部.css文件
+        <Wrapper666 href_666={href_1} active={active}> 
             {children}
-        </Wrapper>
+        </Wrapper666>
     );
 };
 

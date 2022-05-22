@@ -13,9 +13,9 @@ const Other_ITEMS = [{
     },{
         Href_New:"BB|BB",
         Text_New:"bb&bb",
-        is_Active:true,
+        active:true,
     },{
-        Href_New:"CC^CC",
+        Href_New:"CC~CC",
         Text_New:"cc^cc",
     },]
 
@@ -32,11 +32,11 @@ const navigation_1 = () => {
             <a className="navbar__item" href="BLOG">Blog</a>
             {/* <Item_C href_xyz="BLOG"  text_aaa="Blog"  is_Active/> */}
             <a className="navbar__item" href="CONTACT">Contact</a>
-            <Item_Ddd href_1="CONTACT" is_Active> Contact </Item_Ddd>
+            <Item_Ddd href_222="CONTACT" active> Contact </Item_Ddd>
             {/* D为最最接近HTML的写法，需使用默认props参数:children */}
             {/* 传入更多参数,使用map方法操作Array: */}
-            {Other_ITEMS.map(({Href_New, Text_New, is_Active}) => (
-                <Item_Ddd href_xyz={Href_New} is_Active={is_Active}> {Text_New} </Item_Ddd>
+            {Other_ITEMS.map(({Href_New, Text_New, active}) => (
+                <Item_Ddd href_333={Href_New} active={active}> {Text_New} </Item_Ddd>
             ) )}
             
         </Wrapper123>
