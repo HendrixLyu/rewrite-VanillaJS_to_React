@@ -14,7 +14,7 @@ const Item_A = (props) => {
 
 // B->对props解构赋值，再return
 const Item_B = (props) => {
-    const {href, text: pageText} = props //解构赋值
+    const {href, text111: pageText} = props //解构赋值
     return ( //return内部的内容均显示在HTML中
         <a className="navbar__item" href={href}>
             {pageText}
@@ -42,13 +42,14 @@ const Item_C = (props) => {
     //     is_Active: false,
     // };
 
-    /* Html的标签是div,就是styled.div`....`, 标签是a,就是styled.a`....` */
-const activeStyle = css`
+//styled-components↓↓写法
+/* Html的标签是div,就是styled.div`....`, 标签是a,就是styled.a`....` */
+const ActivedStyle = css`
     color: red;
-        opacity:1;
-        ::after {
-            width:30px;
-        }   
+    opacity:1;
+    ::after {
+        width:30px;
+    }   
 `
 const Wrapper666 = styled.a` 
     padding: 16px;
@@ -69,28 +70,27 @@ const Wrapper666 = styled.a`
         transition: width 0.3s ease-in-out;
     }
     :hover {
-        ${activeStyle}
+        ${ActivedStyle}
     }
     :last-of-type {
         padding-right: 0;
     }
-    ${({active}) => active && activeStyle}
-    
+    ${ ({is_Active}) => is_Active && ActivedStyle } //短路计算:如果is_Active为True,就返回ActivedStyle
 `
-//D-> 使用children将innerHTML传进来的内容替代test_aaa.
-    //默认将is_Active设为false,不传值即为默认值false
+// D-> 使用children将innerHTML传进来的内容替代test_aaa.
+//     默认将is_Active设为false,不传值即为默认值false
 const Item_D = (props) => {
-    const {href_1, active, children} = props //解构赋值
+    const {href222, check_Active=false, children} = props //解构赋值
     // let className = "navbar__item"
     // if (is_Active) {
     //     className += " navbar__item--active" } //前面必须加空格
     //将↑↑if改写成三元表达式:↓↓
-    const className111 = active ? 
+    const className111 = check_Active ? 
                     'navbar__item navbar__item--active' :
                     'navbar__item';
     return ( //↓用styled-components替代CSS↓//
         // <a className={className111} href_666={href_1}> {children} </a> //引用外部.css文件
-        <Wrapper666 href_666={href_1} active={active}> 
+        <Wrapper666 href={href222} is_Active={check_Active}> 
             {children}
         </Wrapper666>
     );
