@@ -4,7 +4,7 @@ import Client from './components/Client';
 
 const Clients = () => {
     return ( 
-    <Layout title="Clients">
+    <Layout input_title="Clients">
         <Client />
         <Client />
         <Client />

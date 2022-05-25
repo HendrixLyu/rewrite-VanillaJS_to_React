@@ -15,11 +15,11 @@ const ContentDetail = styled.div`
     justify-content:space-around;
 `
 
-const Layout = ({title, children}) => {
+const Layout = ({input_title:Title_666, children}) => {
     return ( 
-        <Wapper>
+        <Wapper> 
             <Title>
-                {title}
+                {Title_666}
             </Title>
             <ContentDetail>
                 {children}

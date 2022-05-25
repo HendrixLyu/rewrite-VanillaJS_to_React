@@ -1,4 +1,4 @@
-import Header_Name333 from './components/Header';
+ import Header_Name333 from './components/Header';
 import Services_Page996 from './components/Services_Page';
 // import './App.css'; //使用styled-components可完全替代CSS
 import styled from 'styled-components'; //imsc
@@ -20,6 +20,7 @@ const App = () => ( //return()可不写
   <Wapper666>
     <Container>
       <Header_Name333 /> 
+      <Services_Page996 />
       <Services_Page996 />
     </Container>
   </Wapper666>

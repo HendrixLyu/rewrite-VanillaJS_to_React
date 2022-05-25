@@ -13,6 +13,14 @@ const Wapper_LogoName = styled.div`
 const site_Name = 'Tifa' 
 const myLogoName = 'logo_666'
 
+const LT = () => {
+    return ( 
+        <span>Lockhart</span>
+    );
+}//组件内部写组件,就不需要export
+
+
+
 const logo_1 = () => {
     return ( 
         // <div className={ myLogoName }>
@@ -23,6 +31,7 @@ const logo_1 = () => {
         <Wapper_LogoName>
             <Highlight>{site_Name}</Highlight>
             {'  '} { /* 加空格 */}
+            <LT />
             Lockhart
         </Wapper_LogoName>
     )

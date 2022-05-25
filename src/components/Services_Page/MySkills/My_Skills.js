@@ -6,7 +6,7 @@ import Layout from '../Layout';
 const MySkills = () => {
     return ( 
     <Layout 
-        title={
+        input_title={
             (<div>
             My {' '}
             <Highlight>Skill * 3 </Highlight></div>)

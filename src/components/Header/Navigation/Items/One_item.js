@@ -48,7 +48,7 @@ const ActivedStyle = css`
     color: red;
     opacity:1;
     ::after {
-        width:30px;
+        width:40px;
     }   
 `
 const Wrapper666 = styled.a` 
@@ -75,7 +75,14 @@ const Wrapper666 = styled.a`
     :last-of-type {
         padding-right: 0;
     }
-    ${ ({is_Active}) => is_Active && ActivedStyle } //短路计算:如果is_Active为True,就返回ActivedStyle
+    ${ ({is_Active}) => is_Active && ActivedStyle
+        // css`
+        // color: red;
+        // opacity:1;
+        // ::after {
+        //     width:40px;
+        // }` 
+    } //短路计算:如果is_Active为True,就返回ActivedStyle
 `
 // D-> 使用children将innerHTML传进来的内容替代test_aaa.
 //     默认将is_Active设为false,不传值即为默认值false
