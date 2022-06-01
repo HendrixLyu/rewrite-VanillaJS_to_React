@@ -21,7 +21,7 @@ const Other_ITEMS = [{
         Text_New:"<Home>",
     }]
 
-const navigation_1 = () => {
+const navigation_bar = () => {
     return ( 
         // <div className="navbar"> 用styled-components定义的Wapper123 改写||.css文件就不需要了
         <Wrapper123>
@@ -34,16 +34,15 @@ const navigation_1 = () => {
             <a className="navbar__item" href="BLOG">Blog</a>
             {/* <Item_C href_xyz="BLOG"  text_aaa="Blog"  is_Active/> */}
             <a className="navbar__item" href="CONTACT">Contact</a>
-            <Item_Ddd href222="CONTACT0" check_Active> |Contact| </Item_Ddd>
+            <Item_Ddd href222="CONTACT0" check_Active> Contact_2 </Item_Ddd>
             {/* D为最最接近HTML的写法，需使用默认props参数:children */}
             {/* 传入更多参数,使用map方法操作Array: */}
             {Other_ITEMS.map(({Href_New, Text_New, need_active}) => (
                 <Item_Ddd href222={Href_New} check_Active={need_active}> {Text_New} </Item_Ddd>
             ) )}
-            
         </Wrapper123>
         // </div>
     )
 };
 
-export default navigation_1;
+export default navigation_bar;

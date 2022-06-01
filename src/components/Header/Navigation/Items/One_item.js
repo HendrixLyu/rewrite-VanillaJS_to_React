@@ -42,7 +42,7 @@ const Item_C = (props) => {
     //     is_Active: false,
     // };
 
-//styled-components↓↓写法
+//↓↓styled-components↓↓写法
 /* Html的标签是div,就是styled.div`....`, 标签是a,就是styled.a`....` */
 const ActivedStyle = css`
     color: red;
@@ -95,8 +95,9 @@ const Item_D = (props) => {
     const className111 = check_Active ? 
                     'navbar__item navbar__item--active' :
                     'navbar__item';
-    return ( //↓用styled-components替代CSS↓//
+    return ( 
         // <a className={className111} href_666={href_1}> {children} </a> //引用外部.css文件
+        //↓用styled-components替代CSS↓//
         <Wrapper666 href={href222} is_Active={check_Active}> 
             {children}
         </Wrapper666>

@@ -2,13 +2,13 @@
 import styled from 'styled-components';//用styled-components替代CSS文件
 import Highlight from '../../HighLight'; //HighLight为一个多次复用的组件
 
-const Wapper_LogoName = styled.div`
+const Wapper_LogoStyle = styled.div`
     font-size: 1.5rem;
     font-weight: 500;
 `
 // const Wapper_Logo_Highlight = styled.span`
 //     color: #377e9a;
-// `//因为在多个地方可复用，单独提取为一个component
+// `//HighLight因为在多个地方可复用，单独提取为一个component
 
 const site_Name = 'Tifa' 
 const myLogoName = 'logo_666'
@@ -28,12 +28,12 @@ const logo_1 = () => {
         //     Lockhart
         // </div>
         // ↓用styled-components改写↓:
-        <Wapper_LogoName>
+        <Wapper_LogoStyle>
             <Highlight>{site_Name}</Highlight>
             {'  '} { /* 加空格 */}
             <LT />
             Lockhart
-        </Wapper_LogoName>
+        </Wapper_LogoStyle>
     )
 };
 
