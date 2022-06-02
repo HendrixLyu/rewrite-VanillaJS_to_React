@@ -6,8 +6,9 @@ const Wrapper123 = styled.div`
     display: flex;
 `
 
-const Other_ITEMS = [{
-        Href_New:"BLOGA",
+const Other_ITEMS = [
+    { 
+        Href_New:"BLOG.A",
         Text_New:" Blog_A",
     },{
         Href_New:"SERVICES2",
