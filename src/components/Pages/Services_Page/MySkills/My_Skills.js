@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Highlight from '../../HighLight';
+import Highlight from '../../../HighLight/index';
 import Skill from './components/Skill';
 import Layout from '../Layout';
 

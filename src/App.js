@@ -1,5 +1,5 @@
 import Header_Name2333 from './components/Header';
-import Services_Page996 from './components/Services_Page';
+import Pages from './components/Pages';
 // import './App.css'; //使用styled-components可完全替代CSS
 import styled from 'styled-components'; // 快捷键:imsc
 
@@ -20,9 +20,8 @@ const App = () => ( //return()可不写
     /* <div className = 'container'> */
   <Wapper_666>
     <Container111>
-      <Header_Name2333 /> 
-      <Services_Page996 />
-      <Services_Page996 />
+      <Header_Name2333 />
+      <Pages />
     </Container111>
   </Wapper_666>
     /* </div> */
