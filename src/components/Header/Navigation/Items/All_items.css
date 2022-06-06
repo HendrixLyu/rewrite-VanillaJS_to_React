@@ -2,7 +2,7 @@
     padding: 16px;
     text-decoration: none;
     color: #49515d;
-    font-size: 15px;
+    font-size: 14px;
     opacity: 0.6;
     display: block;
     transition: opacity 0.3s ease-in-out;
@@ -20,6 +20,7 @@
 
 .navbar__item--active,
 .navbar__item:hover {
+    color: red;
     opacity: 1;
 }
 

@@ -15,13 +15,14 @@ const Container111 = styled.div`
   flex-direction: column;
 `;
 
+let ACTIVE_PAGE = { valueName: 'SERVICE->' };
 // 任何component首字母强制大写
 const App = () => ( //return()可不写
     /* <div className = 'container'> */
   <Wapper_666>
     <Container111>
-      <Header_Name2333 />
-      <Pages />
+      <Header_Name2333 activePage_Header={ACTIVE_PAGE}/>
+      <Pages activePage_Page={ACTIVE_PAGE}/>
     </Container111>
   </Wapper_666>
     /* </div> */

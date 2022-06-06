@@ -1,0 +1,11 @@
+.cont_left {
+    width: 35%;
+    height: 80%;
+    background-image: linear-gradient( to bottom right, rgb(103, 103, 240) 0%, #d9f6c3 100%)
+}
+
+.cont_right {
+    width: 45%;
+    height: 70%;
+    background-image: linear-gradient( to top left, #4c81a6 0%, #d5bb25 100%)
+}

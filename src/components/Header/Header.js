@@ -12,7 +12,7 @@ const Wap_Left = styled.div`
     flex: 1;
 `
 
-const Header_NameOne = () => (
+const Header_NameOne = ( {activePage_Header} ) => (
     // <header className="nav"> 被Wapper456 替换
     <Wapper456>
         {/* <div className="nav__left"> 被Wap_Left替换 */}
@@ -22,7 +22,7 @@ const Header_NameOne = () => (
         {/* </div> */}
 
         <div className="nav__right">
-            <Navigation_222 />
+            <Navigation_222 active_Page_NavBar = {activePage_Header}/>
         </div>
     </Wapper456>
     // </header>

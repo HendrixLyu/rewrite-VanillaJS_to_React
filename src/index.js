@@ -11,9 +11,16 @@ const rootABC = ReactDOM.createRoot(document.getElementById('root123'));
 //index,js is React- Js gateway
 const boolValue = 1;
 
-rootABC.render(boolValue ? <div>Hello World!!!</div> : <div>Bye~bye~</div>);//将react挂在rootA上
+// rootABC.render(boolValue ? <div>Hello World!!!</div> : <div>Bye~bye~</div>);//将react挂在rootA上
 
 rootABC.render(
     <App2323 />
 );
+
+setInterval(() => {
+    console.log('re-render')
+    rootABC.render(
+        <App2323 />
+    );
+}, 3000)
 

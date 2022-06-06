@@ -10,8 +10,8 @@ const Wapper_LogoStyle = styled.div`
 //     color: #377e9a;
 // `//HighLight因为在多个地方可复用，单独提取为一个component
 
-const site_Name = 'Tifa' 
-const myLogoName = 'logo_666'
+const siteName = 'Tifa' ;
+const myLogoName = 'logo_666' //将className设为变量
 
 const LT = () => {
     return ( 
@@ -23,16 +23,16 @@ const LT = () => {
 
 const logo_1 = () => {
     return ( 
-        // <div className={ myLogoName }>
+        // <div className = { myLogoName }>
         //     <span className="logo__highlight">{ site_Name }</span>
         //     Lockhart
         // </div>
         // ↓用styled-components改写↓:
         <Wapper_LogoStyle>
-            <Highlight>{site_Name}</Highlight>
+            <Highlight>{ siteName }</Highlight>
             {'  '} { /* 加空格 */}
             <LT />
-            Lockhart
+            XXYYZZ
         </Wapper_LogoStyle>
     )
 };
