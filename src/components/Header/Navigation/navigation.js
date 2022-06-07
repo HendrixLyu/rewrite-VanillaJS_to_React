@@ -48,7 +48,7 @@ const  navigation_bar = ( {active_Page_NavBar} ) => {
                 <Item_D 
                     href222 = {Href_New} 
                     check_Active = {active_Page_NavBar.valueName === need_active}
-                    onClick = {(event) => {
+                    Click_func = {(event) => {
                         event.preventDefault()
                         active_Page_NavBar.valueName = need_active;
                         console.log(active_Page_NavBar.valueName);

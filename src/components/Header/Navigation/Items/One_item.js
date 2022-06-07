@@ -88,7 +88,7 @@ const Wrapper666 = styled.a`
 // D-> 使用children将innerHTML传进来的内容替代test_aaa.
 //     默认将is_Active设为false,不传值即为默认值false
 const Item_D = (props) => {
-    const {href222, check_Active=false, children, onClick} = props //解构赋值
+    const {href222, check_Active=false, children, Click_func} = props //解构赋值
     // let className = "navbar__item"
     // if (is_Active) {
     //     className += " navbar__item--active" } //前面必须加空格
@@ -99,7 +99,7 @@ const Item_D = (props) => {
     return ( 
         // <a className={className2333} href_666={href_1}> {children} </a> //引用外部.css文件
         //↓ 用styled-component:Wapper666 替代CSS:'navbar__item' ↓//
-        <Wrapper666 href={href222} is_Active={check_Active} onClick={onClick} > 
+        <Wrapper666 href={href222} is_Active={check_Active} onClick={Click_func} > 
             {children}
         </Wrapper666>
     );
