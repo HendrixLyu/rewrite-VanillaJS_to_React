@@ -13,14 +13,14 @@ const boolValue = 1;
 
 // rootABC.render(boolValue ? <div>Hello World!!!</div> : <div>Bye~bye~</div>);//将react挂在rootA上
 
-rootABC.render(
+rootABC.render( //render:渲染
     <App2323 />
 );
 
-setInterval(() => {
-    console.log('re-render')
-    rootABC.render(
-        <App2323 />
-    );
-}, 3000)
+// setInterval(() => {
+//     console.log('re-render')
+//     rootABC.render(
+//         <App2323 />
+//     );
+// }, 2000) //2秒刷新一次App2323,可实现动态刷新->但极其消耗资源!!!
 

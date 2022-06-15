@@ -45,8 +45,9 @@ const Item_C = (props) => {
 //↓↓styled-components↓↓写法
 // ActivedStyle就是'navbar__item--active'这个.css
 const ActivedStyle = css`
-    color: red;
+    color: darkorange;
     opacity:1;
+    font-weight: bold;
     ::after {
         width:40px;
     }   

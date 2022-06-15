@@ -10,7 +10,7 @@
     "styled-components": "^5.3.5"
   },
   "scripts": {
-    "starts": "react-scripts start"
+    "start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [

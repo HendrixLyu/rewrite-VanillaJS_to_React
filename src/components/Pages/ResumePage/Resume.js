@@ -7,12 +7,17 @@ const Wapper = styled.div`
     width:50%;
     height:60vh;
     font-size:2rem;
+    text-align:center;
 `
 
 const ResumePage = () => {
     return ( 
         <Wapper>
-            My《Resume》。。。
+            My
+            <br/>
+            《Resume》
+            <hr/>
+            。。。 。。。
         </Wapper>
     );
 }
