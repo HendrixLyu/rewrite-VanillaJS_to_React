@@ -20,7 +20,7 @@ const Container111 = styled.div`
 // 任何component首字母强制大写
 const App = () => { //return()可不写
     /* <div className = 'container222'> */
-  const [activePage, setActivePage] = useState('SERVICE->') //初始值为'SERVICE->'
+  const [activePage, setActivePage] = useState('SERVICE->') //useState()内为初始值为, useState返回值是一个Array,将返回值结构,第一项为当前状态值;第二项为状态更新函数,这个函数接收想要更新的状态值作为参数
 
   return(
   <Wapper_666>
