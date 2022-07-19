@@ -2,7 +2,7 @@ import "./All_items.css";
 import styled, { css } from "styled-components"; //在js内写`CSS`
 //共ABCD四种写法
 // A->直接通过props.传参
-const Item_A = (props) => {
+const Item_A = props => {
   // props展开写就是: const props={href:"RESUME" text_666:"Resume"},从<Item_A href="RESUME" text_666="Resume" />获得
   // 所以 props.href = "RESUME"
   return (
@@ -14,7 +14,7 @@ const Item_A = (props) => {
 };
 
 // B->对props解构赋值，再return
-const Item_B = (props) => {
+const Item_B = props => {
   const { href, text111: pageText } = props; //解构赋值
   return (
     //return内部的内容均显示在HTML中
@@ -26,7 +26,7 @@ const Item_B = (props) => {
 // A&B都不能接受"navbar__item--active"参数//
 // C-> 再传入is_Active变量,并设置默认值
 // props接收到的参数为: <Item_Cccc href_xyz="BLOG"  text_aaa="Blog"  is_Active/>.
-const Item_C = (props) => {
+const Item_C = props => {
   const { href_xyz, text_aaa: pageName, is_Active = false } = props; //解构赋值 //默认将is_Active设为false,不传值即默认false
   // console.log(href_1, is_Active)
   let className1 = "navbar__item";
@@ -50,20 +50,21 @@ const Item_C = (props) => {
 const ActivedStyle = css`
   color: darkorange;
   opacity: 1;
-  font-weight: bold;
+  /* font-weight: bold; */
   ::after {
-    width: 40px;
+    width: 30px;
   }
 `;
 /* Html的标签是div,就是styled.div`....`, 标签是a,就是styled.a`....` */
 const WrapperDDD = styled.a`
-  padding: 16px;
+  box-sizing: border-box;
+  padding: 20px;
   text-decoration: none;
   color: #49515d;
   font-size: 14px;
   opacity: 0.6;
   display: block;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   /* 用scss写法 */
   ::after {
     content: "";
@@ -92,7 +93,7 @@ const WrapperDDD = styled.a`
 `;
 // D-> 使用children将innerHTML传进来的内容替代test_aaa.
 //     默认将is_Active设为false,不传值即为默认值false
-const Item_D = (props) => {
+const Item_D = props => {
   const { href222, check_Active = false, children, Click_func } = props; //解构赋值
   // let className = "navbar__item"
   // if (is_Active) {
