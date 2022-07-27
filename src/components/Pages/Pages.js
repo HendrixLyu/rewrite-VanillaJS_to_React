@@ -5,7 +5,7 @@ import ResumePage from './ResumePage';
 import Services_Page from './Services_Page';
 import Blog_Page from './BlogPage/Blog';
 
-const Wapper123 = styled.div`
+const Wrapper123 = styled.div`
     display:flex;
     flex-direction: column;
 `
@@ -21,19 +21,19 @@ const Item666 = styled.div` //仅用于显示激活页
 
 const All_Pages = ({activePage_Page}) => {
     return ( 
-        // <Wapper123> //↓↓用CSS控制渲染
+        // <Wrapper123> //↓↓用CSS控制渲染
         //     <Item666 active = {false}> <HomePage /> </Item666>
         //     <Item666 active > <ResumePage /> </Item666>
         //     <Item666> <Services_Page /> </Item666>
         //     <Item666 active = {true}> <ContactPage /> </Item666>
-        // </Wapper123>
-        <Wapper123> {/* ↓↓用短路计算控制渲染 */} 
+        // </Wrapper123>
+        <Wrapper123> {/* ↓↓用短路计算控制渲染 */} 
             {activePage_Page === 'HOME->' &&  <HomePage />}
             {activePage_Page === 'BLOG->' &&  <Blog_Page />}
             {activePage_Page === 'RESUME->' &&  <ResumePage />}
             {activePage_Page === 'SERVICE->' &&  <Services_Page />}
             {activePage_Page === 'CONTACT->' &&  <ContactPage />}
-        </Wapper123>
+        </Wrapper123>
     );
 }
 

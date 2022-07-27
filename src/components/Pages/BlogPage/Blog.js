@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wapper_B = styled.div`
+const Wrapper_B = styled.div`
     width:800px;
     height:550px;
     border:5px solid orange;
@@ -16,9 +16,9 @@ const Wapper_B = styled.div`
 
 const Blog_Page = () => {
     return ( 
-        <Wapper_B>
+        <Wrapper_B>
             <span>Blog_111:</span>
-        </Wapper_B>
+        </Wrapper_B>
     );
 }
 

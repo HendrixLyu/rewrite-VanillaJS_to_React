@@ -7,7 +7,7 @@ import App2323 from "./App";
 const rootABC = ReactDOM.createRoot(document.getElementById("root123"));
 
 //JSX, write xml/Html like language in JavaScript. 所以写的越像html越好!!!
-//index,js is React- Js gateway
+//index,js is React-Js gateway
 const boolValue = 1;
 
 // rootABC.render(boolValue ? <div>Hello World!!!</div> : <div>Bye~bye~</div>);//将react挂在rootA上

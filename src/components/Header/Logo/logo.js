@@ -2,7 +2,7 @@
 import styled from "styled-components"; //用styled-components替代CSS文件
 import Highlight from "../../HighLight"; //HighLight为一个多次复用的组件
 
-const Wapper_LogoStyle = styled.div`
+const Wrapper_LogoStyle = styled.div`
   font-size: 1.5rem;
   font-weight: 500;
 `;
@@ -24,12 +24,12 @@ const logo_1 = () => {
     //     Lockhart
     // </div>
     // ↓用styled-components改写↓:
-    <Wapper_LogoStyle>
+    <Wrapper_LogoStyle>
       <Highlight>{siteName}</Highlight>
       {"  "} {/* 加空格 */}
       <LT />
       XXYYZZ
-    </Wapper_LogoStyle>
+    </Wrapper_LogoStyle>
   );
 };
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wapper = styled.div`
+const Wrapper = styled.div`
     border: 3px dashed blue;
     padding:10px;
     margin:50px;
@@ -12,13 +12,13 @@ const Wapper = styled.div`
 
 const ResumePage = () => {
     return ( 
-        <Wapper>
+        <Wrapper>
             My
             <br/>
             《Resume》
             <hr/>
             。。。 。。。
-        </Wapper>
+        </Wrapper>
     );
 }
 

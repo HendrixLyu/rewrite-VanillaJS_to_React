@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wapper666 = styled.div`
+const Wrapper666 = styled.div`
     font-size:2.5rem;
     color: #000;
     width:70%;
@@ -16,9 +16,9 @@ const Wapper666 = styled.div`
 
 const HomePage = (props) => {
     return ( 
-        <Wapper666>
+        <Wrapper666>
             <p>Home🏠</p>
-        </Wapper666>
+        </Wrapper666>
     );
 }
 

@@ -4,7 +4,7 @@ import Item_D from "./Items"; //Item为可复用组件
 // import './navigation.css' //CSS文件被styled-components完全替代
 import styled from "styled-components"; //使用styled-components可完全替代CSS
 
-//用<Wapper123>代替<div className="navbar">
+//用<Wrapper123>代替<div className="navbar">
 const Wrapper123 = styled.div`
   display: flex;
 `;
