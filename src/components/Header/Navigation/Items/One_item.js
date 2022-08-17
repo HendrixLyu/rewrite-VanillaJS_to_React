@@ -1,4 +1,4 @@
-import "./All_items.css";
+import "./All_items.css"; //引入外部CSS文件
 import styled, { css } from "styled-components"; //在js内写`CSS`
 //共ABCD四种写法
 // A->直接通过props.传参
@@ -7,7 +7,8 @@ const Item_A = props => {
   // 所以 props.href = "RESUME"
   return (
     //return内部的内容将完整 显示在HTML中
-    <a className="navbar__item" href_22={props.href}>
+    <a className="navbar__item" href_22={props.href}> 
+    {/* 使用外部css样式 */}
       {props.text_666}
     </a>
   );
