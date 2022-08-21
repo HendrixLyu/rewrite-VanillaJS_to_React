@@ -18,6 +18,7 @@ const Blog_Page = () => {
     return ( 
         <Wrapper_B>
             <span>Blog_111:</span>
+            <input></input>
         </Wrapper_B>
     );
 }

@@ -62,7 +62,7 @@ const navigation_bar = ({ active_Page_NavBar, setActive_Page_NavBar }) => {
         Contact
       </a>
       {/* <Item_D href222="CONTACT0" check_Active={active_Page_NavBar === 'CONTACT->'}> Contact1 </Item_D> */}
-      {/* Item_D↑↑为最接近Html的写法，需使用默认props参数:children */}
+      {/* Item_D↑↑为最接近Html的写法,想要在标签内的东西能作为props传入组件,需使用默认props参数:children */}
       {/* 传入更多参数,使用map方法操作Array: */}
       {Other_ITEMS.map(({ Href_New, Text_New, need_active }) => (
         <Item_D

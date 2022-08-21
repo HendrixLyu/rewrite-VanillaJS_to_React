@@ -37,4 +37,45 @@ const App = () => {
   );
 };
 
+function A1() {
+  this.a = 'aaa';
+  this.b = function () {
+    console.log('ccc');
+  };
+}
+
+class A2 {
+  constructor(){
+    this.a = 'aaa'
+  }
+  b1(){
+    console.log('b-1')
+  }
+  b2 = () => {
+    console.log('b-2')
+  }
+}
+
+class A3 {
+  constructor(){
+    this.a = 'aaaa' 
+    this.b = function() {
+      console.log('bbbb')
+    }
+  }
+  A = 'AAA'
+  B = function() {
+    console.log('BBB')
+  }
+  AAA() {
+    console.log('AAAaaa')
+  }
+  BBB = () => {
+    console.log('BBBbbb')
+  }
+  
+}
+console.log(new A1());
+console.log(new A2());
+console.log(new A3());
 export default App;

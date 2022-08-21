@@ -1,14 +1,15 @@
-import "./All_items.css"; //引入外部CSS文件
+import "./All_items.css"; //引入外部.css文件
 import styled, { css } from "styled-components"; //在js内写`CSS`
-//共ABCD四种写法
+//props属性，共ABCD四种写法
 // A->直接通过props.传参
 const Item_A = props => {
-  // props展开写就是: const props={href:"RESUME" text_666:"Resume"},从<Item_A href="RESUME" text_666="Resume" />获得
+  // props展开写就是: const props = {href:"RESUME" text_666:"Resume"},从<Item_A href="RESUME" text_666="Resume" />获得
   // 所以 props.href = "RESUME"
   return (
     //return内部的内容将完整 显示在HTML中
     <a className="navbar__item" href_22={props.href}> 
-    {/* 使用外部css样式 */}
+
+    {/* 引用外部.css文件, 使用className,因为class会被识别为javascript语法  */}
       {props.text_666}
     </a>
   );
@@ -90,7 +91,7 @@ const WrapperDDD = styled.a`
     // ::after {
     //     width:40px;
     // }`
-  }//短路计算:如果is_Active为True,就返回ActivedStyle
+  }//短路计算:如果is_Active为True,就返回ActivedStyle这个css
 `;
 // D-> 使用children将innerHTML传进来的内容替代test_aaa.
 //     默认将is_Active设为false,不传值即为默认值false
