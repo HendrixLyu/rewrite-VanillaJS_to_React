@@ -7,9 +7,8 @@ const Item_A = props => {
   // 所以 props.href = "RESUME"
   return (
     //return内部的内容将完整 显示在HTML中
-    <a className="navbar__item" href_22={props.href}> 
-
-    {/* 引用外部.css文件, 使用className,因为class会被识别为javascript语法  */}
+    <a className="navbar__item" href_22={props.href}>
+      {/* 引用外部.css文件, 使用className,因为class会被识别为javascript语法  */}
       {props.text_666}
     </a>
   );
@@ -108,7 +107,7 @@ const Item_D = props => {
     // <a className={className2333} href_666={href_1}> {children} </a> //引用外部.css文件
     //↓ 用styled-component:Wapper666 替代CSS:'navbar__item' ↓//
     <WrapperDDD href={href222} is_Active={check_Active} onClick={Click_func}>
-      {children}
+      {children} 
     </WrapperDDD>
   );
 };

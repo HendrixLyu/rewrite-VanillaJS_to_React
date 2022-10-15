@@ -68,10 +68,10 @@ const navigation_bar = ({ active_Page_NavBar, setActive_Page_NavBar }) => {
         <Item_D
           href222={Href_New}
           check_Active={active_Page_NavBar === need_active}
-          Click_func={(event) => {
+          Click_func={event => {
             event.preventDefault();
             // setActive_Page_NavBar(need_active)//使用setState直接改值,与↓↓等效
-            setActive_Page_NavBar((preState) => {
+            setActive_Page_NavBar(preState => {
               preState = need_active;
               return preState;
             }); //第一个参数用callback写
